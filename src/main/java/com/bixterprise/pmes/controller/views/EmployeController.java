@@ -3,7 +3,7 @@ package com.bixterprise.pmes.controller.views;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
+//import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +19,19 @@ public class EmployeController {
 
 	@Autowired EmployeService service;
 	
+//	
+//	@GetMapping
+//	public String homeView(Model model, Pageable pageable) {
+//		model.addAttribute("employes", service.list(pageable).getContent());
+//		model.addAttribute("isEmploye", true);
+//		return "employes/home";
+//	}
+	
 	@GetMapping
-	public String homeView(Model model, Pageable pageable) {
-		model.addAttribute("employes", service.list(pageable).getContent());
+	public String homeView(Model model) {
+		List<Employe> l = service.list();
+		System.out.println("Employees = "+l);
+		model.addAttribute("employes", l);
 		model.addAttribute("isEmploye", true);
 		return "employes/home";
 	}

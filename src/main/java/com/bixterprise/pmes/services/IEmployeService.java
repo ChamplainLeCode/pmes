@@ -1,8 +1,10 @@
 package com.bixterprise.pmes.services;
 
-import org.springframework.data.domain.Pageable;
+//import org.springframework.data.domain.Pageable;
 
-import org.springframework.data.domain.Page;
+import java.util.List;
+
+//import org.springframework.data.domain.Page;
 
 import com.bixterprise.pmes.models.Employe;
 
@@ -15,6 +17,8 @@ public interface IEmployeService {
 
 	public void delete(Employe e);
 
-	public Page<Employe> list(Pageable pageable);
+//	public Page<Employe> list(Pageable pageable);
+	
+	public List<Employe> list();
 	
 }

@@ -19,9 +19,9 @@
         	
 	        <c:forEach items="${employes}" var="employe">
 	        	<tr>
-	        		<td>${employe.nom}</td>
-	        		<td>${employe.prenom}</td>
-	        		<td>${employe.fonction}</td>
+	        		<td>${employe.name}</td>
+	        		<td>${employe.surname}</td>
+	        		<td>${employe.function}</td>
 	        		<td>
 	        			<a href="employes/delete/${employe.id}"><button type="button" class="btn btn-danger btn-delete" data="${employe.id}"><i class="fa fa-trash"></i></button></a>
 	        			<a href="edit/${employe.id}"><button type="button" class="btn btn-success btn-edit" data="${employe.id}"><i class="fa fa-edit"></i></button></a>
