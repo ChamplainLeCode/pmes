@@ -15,6 +15,14 @@
     <select id="list" resultMap="employeDao">
         SELECT id, name, surname, function FROM employees
     </select>
+    
+    
+    <!--Employ find by Id -->
+    <select id="findById" resultMap="employeDao">
+        SELECT id, name, surname, function FROM employees where id = #{id}
+    </select>
+    
+    
     <!--Employ Select all -->
 	<insert id="save" parameterType="com.bixterprise.pmes.models.Employe" >
         insert into employees (name, surname, function) values (#{name}, #{surname}, #{function})

@@ -1,16 +1,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<c:set var="context" value="${pageContext.servletContext.contextPath}"></c:set>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 5.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<c:set var="context" value="${pageContext.servletContext.contextPath}"></c:set>
 
 <head>
 <title>Todo Management</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="${context}/webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+<script src="${context}/webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="${context}/webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="${context}/webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
 <style>
 .footer {
     position: fixed;

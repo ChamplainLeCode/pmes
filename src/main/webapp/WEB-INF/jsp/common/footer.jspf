@@ -1,7 +1,5 @@
 <script>
-    $('#targetDate').datepicker({
-        format: 'dd/mm/yyyy'
-    });
+    $('input[id="id"]').attr('readonly', 'readonly');
 </script>
 <div class="footer">
     Fixed Footer

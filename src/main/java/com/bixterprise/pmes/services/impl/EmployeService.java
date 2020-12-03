@@ -49,6 +49,10 @@ public class EmployeService implements IEmployeService{
 	public List<Employe> list(){
 		return dao.list();
 	}
+
+	public Employe findById(Long id) {
+		return mapper.findById(id);
+	}
 	
 	
 }
