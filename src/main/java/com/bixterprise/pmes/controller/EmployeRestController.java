@@ -23,8 +23,11 @@ public class EmployeRestController {
 
 	@GetMapping("/list")
 	public List<Employe> getAll(){
-		
-		
+		Employe e = new Employe();
+		e.setName("Bakop Njoba");
+		e.setSurname("Champlain Marius");
+		e.setFunction("Software Developer");
+		service.save(e);
 		return service.list();
 	}
 //	@GetMapping("/list")

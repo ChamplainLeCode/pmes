@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bixterprise.pmes.mybatis.dao.EmployeDao">
+    <!--Employe Mapping with columns in the database-->
+    <resultMap id="employeDao" type="com.bixterprise.pmes.models.Employe">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="surname" column="surname"/>
+        <result property="function" column="function"/>
+    </resultMap>
+
+    <!--Employ Select all -->
+    <select id="list" resultMap="employeDao">
+        SELECT id, name, surname, function FROM employees
+    </select>
+    <!--Employ Select all -->
+	<insert id="save" parameterType="com.bixterprise.pmes.models.Employe" >
+        insert into employees (name, surname, function) values (#{name}, #{surname}, #{function})
+    </insert>
+</mapper>

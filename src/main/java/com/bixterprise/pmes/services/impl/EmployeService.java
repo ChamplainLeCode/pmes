@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 //import com.bixterprise.pmes.dao.EmployeRepository;
 import com.bixterprise.pmes.models.Employe;
+import com.bixterprise.pmes.mybatis.dao.EmployeDao;
 import com.bixterprise.pmes.mybatis.mappers.EmployeMapper;
 import com.bixterprise.pmes.services.IEmployeService;
 
@@ -18,7 +19,8 @@ public class EmployeService implements IEmployeService{
 
 //	@Autowired EmployeRepository dao;
 	
-	@Autowired EmployeMapper dao;
+	@Autowired EmployeMapper mapper;
+	@Autowired EmployeDao dao;
 	
 	@Override
 	public Employe save(Employe e) {
@@ -29,14 +31,14 @@ public class EmployeService implements IEmployeService{
 	@Override
 	public Employe edit(Employe e) {
 		
-		dao.edit(e);
+		mapper.edit(e);
 		return e;
 	}
 
 	@Override
 	public void delete(Employe e) {
 		
-		dao.delete(e);
+		mapper.delete(e);
 	}
 
 //	@Override
@@ -45,7 +47,7 @@ public class EmployeService implements IEmployeService{
 //	}
 
 	public List<Employe> list(){
-		return dao.findAll();
+		return dao.list();
 	}
 	
 	
